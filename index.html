@@ -75,7 +75,55 @@
             console.log("Les valeurs et les types sont égaux")
         }
         else{
-            console.log("Les valeurs ou les types sont différentes")
+            console.log("Les valeurs ou les types sont différents")
+        }
+
+
+        var day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Dimanche"
+                break;
+            case 1:
+                day="Lundi"
+                break;
+            case 2:
+                day = "Mardi"
+                break;
+            case 3:
+                day = "Mercredi"
+                break;
+            case 4:
+                day = "Jeudi"
+                break;
+            case 5:
+                day = "Vendredi"
+                break;
+            case 6:
+                day = "Samedi"
+                break;
+        
+            default:
+                break;
+        }
+
+        console.log(day);
+
+        var couleur="orange"
+
+        switch (couleur) {
+            case 'rouge':
+                console.log("Arretez, la couleur du feu est rouge")
+                break;
+                case 'orange':
+                console.log("Attention, la couleur du feu est orange")
+                break;
+                case 'vert':
+                console.log("Allez-y, la couleur du feu est verte")
+                break;
+            default: 
+                console.log("Couleur inconnue")
+                break;
         }
     </script>
     
