@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JAVASCRIPT Array Iteration</h1>
+    <script>
+        const numbers = [45,4,9,15,25];
+        function double(num){
+            console.log(num*2,"function for each");
+        }
+        // itération
+        numbers.forEach(double);
+
+
+        const num=[1,2,3,4,5];
+        function d(nbr){
+            return nbr*3;
+        }
+        const multiplication= num.map(d);
+        // retourner un nouveau tableau + itération
+        console.log(multiplication, "fonction map");
+
+        const numbers1 = [1,2,3,4,5,6];
+        const evennumbers1 = numbers1.filter((num) => num % 2 === 0);
+        console.log(evennumbers1, "fonction filter");
+
+        const numbers2=[1,2,3,4,5];
+        // reduit le tableau a une seule valeure
+        const somme2= numbers2.reduce((accumulator,currentvalue)=>(accumulator+currentvalue),1);
+        console.log(somme2, "fonction reduce");
+
+
+        const numbers3 = [2,4,6,8,10];
+        const alleven = numbers3.every((num) => num % 2 === 0);
+        console.log(alleven, "function every");
+
+        // retourne l'index de l'element
+        const fruit=["Pomme","Banane","Orange","Fraise"];
+        const indexfruit = fruit.indexOf("Orange");
+        console.log(indexfruit, "Fonction indexOf");
+
+        // retourne le premier element qui satisfait la condition
+        const result = fruit.find((fr => fr.length > 5))
+        console.log(result, "fonction find");
+
+        const numbers4 = [10,20,30,40,50];
+        const index = numbers4.findIndex((num) => num > 50);
+        console.log(index, "function findIndex");
+    </script>
+</body>
+</html>
