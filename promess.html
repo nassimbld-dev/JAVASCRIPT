@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 id="demo"></h2>
+    <script>
+        // partie 01: action de donner la promesse, partie 02: attendre la promesse
+        function myDisplayer(somme){
+            document.getElementById("demo").innerHTML = somme
+        }
+        let myPromess = new Promise(function(myResolve,myReject){
+            let x = 0
+            if(x == 0){
+                myResolve("OK")
+            }else{
+                myReject("Error")
+            }
+        })
+        myPromess.then(
+            function(value){
+                myDisplayer(value)
+            }
+            ,function(error){
+                myDisplayer(eroor)
+            }
+        )
+    </script>
+</body>
+</html>
